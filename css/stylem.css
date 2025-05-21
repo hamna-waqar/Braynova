@@ -243,14 +243,13 @@ img.svg{
 /*	03) KEVIN MOBILE MENU
 /*---------------------------------------------------*/
 
-.kevin_tm_mobile_menu{
-	width: 100%;
-	height: auto;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	display: none;
-	z-index: 10;
+.kevin_tm_mobile_menu {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .kevin_tm_topbar .menu { display: none; }
+  .kevin_tm_mobile_menu { display: block; }
 }
 .kevin_tm_mobile_menu .mobile_menu_inner{
 	width: 100%;
