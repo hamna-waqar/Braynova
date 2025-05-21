@@ -2715,3 +2715,61 @@ img.svg{
 	.arlo_intro_content .demo_list ul li{width: 100%;padding-left: 0px;margin-bottom: 20px;}
 	.arlo_intro_content .demo_list{padding-left: 20px;padding-right: 20px;}
 }
+/* ===== Responsive Fixes for Small Devices ===== */
+@media (max-width: 991px) {
+  /* Show mobile menu, hide desktop menu */
+  .kevin_tm_topbar .menu {
+    display: none;
+  }
+  .kevin_tm_mobile_menu {
+    display: block;
+  }
+
+  /* Home Section */
+  .kevin_tm_home .content_inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .kevin_tm_home .left,
+  .kevin_tm_home .right {
+    padding: 0 !important;
+    width: 100%;
+  }
+  .kevin_tm_home .right .image {
+    width: 250px;
+    height: 250px;
+    margin-top: 40px;
+  }
+
+  /* About Section */
+  .kevin_tm_about .about_inner {
+    flex-direction: column;
+  }
+  .kevin_tm_about .left,
+  .kevin_tm_about .right {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Services */
+  .kevin_tm_service .service_list ul li {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .kevin_tm_home .job h3 {
+    font-size: 36px;
+  }
+  .kevin_tm_home .name_another,
+  .kevin_tm_home .centered_content .name {
+    font-size: 32px;
+  }
+  .kevin_tm_button a {
+    padding: 6px 20px 10px 20px;
+    font-size: 14px;
+  }
+}
