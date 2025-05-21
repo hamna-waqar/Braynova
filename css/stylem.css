@@ -1,0 +1,2718 @@
+@charset "utf-8";
+/*
+/*	Copyright (c) 2020 Marketify
+/*	Author: Marketify
+/*	This file is made for CURRENT TEMPLATE
+
+
+01) KEVIN BASE
+02) KEVIN TOPBAR
+03) KEVIN MOBILE MENU
+04) KEVIN HOME
+05) KEVIN ABOUT
+06) KEVIN SERVICE
+07) KEVIN PORTFOLIO
+08) KEVIN EXPERIENCE
+09) KEVIN AWARDS
+10) KEVIN PARTNERS
+11) KEVIN VIDEO
+12) KEVIN TESTIMONIALS
+13) KEVIN NEWS
+14) KEVIN CONTACT
+15) KEVIN FOOTER
+16) KEVIN COPYRIGHT
+17) KEVIN CURSOR
+18) KEVIN WATER EFFECT
+19) KEVIN GLITCH EFFECT
+20) KEVIN PARTICLE EFFECT
+21) KEVIN PORTFOLIO SINGLE
+22) KEVIN MEDIA QUERIES (FOR SMALL DEVIVES)
+
+
+/*---------------------------------------------------*/
+/*	01) KEVIN BASE
+/*---------------------------------------------------*/
+
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px
+}
+body{
+	font-family: "Mulish";
+	font-size: 16px;
+	line-height: 2;
+	letter-spacing: 0.8px;
+	word-wrap: break-word;
+	font-weight: 400;
+	background-color: #fff;
+	color: #333;
+}
+svg{
+	fill: currentcolor;
+	width: 15px;
+	height: 15px;
+}
+img.svg{
+	width: 15px;
+	height: 15px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #6f6f6f;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #6f6f6f;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #6f6f6f;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #6f6f6f;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #6f6f6f;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: #6f6f6f;
+}
+
+.kevin_tm_all_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_all_wrap,
+.kevin_tm_all_wrap *{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.kevin_tm_all_wrap .wrapper_inner{
+	width: 100%;
+	min-height: 100vh;
+	clear: both;
+	float: left;
+}
+.kevin_tm_preloader{
+  position: fixed;
+  background-color: #fff;
+  z-index: 9999999;
+  height: 100%;
+  width: 100%;
+	
+  -webkit-transition: .2s all ease;
+  -o-transition: .2s all ease;
+  transition: .2s all ease;
+  -webkit-transition-delay: .5s;
+  -o-transition-delay: .5s;
+  transition-delay: .5s; }  
+.kevin_tm_preloader .spinner_wrap{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 33333;
+}
+.kevin_tm_preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+.kevin_tm_preloader:before,
+.kevin_tm_preloader:after{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: #100e17;
+	
+    -webkit-transition: .7s all ease;
+    -o-transition: .7s all ease;
+    transition: .7s all ease;
+}
+.kevin_tm_preloader:before{
+    top: 0;
+    left: 0; 
+}
+.kevin_tm_preloader:after{
+    bottom: 0;
+	left: 0; 
+}
+.kevin_tm_preloader.loaded:before, 
+.kevin_tm_preloader.loaded:after{height: 0%;}
+.kevin_tm_all_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+
+/*---------------------------------------------------*/
+/*	02) KEVIN TOPBAR
+/*---------------------------------------------------*/
+
+.kevin_tm_topbar{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  padding: 25px 0px;
+ 
+-webkit-transition: all .3s ease;
+   -moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	 -o-transition: all .3s ease;
+		transition: all .3s ease;  
+}
+.kevin_tm_topbar.animate{
+	background-color: #fff;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.15);
+	padding: 20px 0px;
+}
+.kevin_tm_topbar.animate .menu ul li a{
+	color: #000;
+}
+.kevin_tm_topbar .dark{
+	display: none;
+}
+.kevin_tm_topbar.animate .dark{
+	display: block;
+}
+.kevin_tm_topbar.animate .light{
+	display: none;
+}
+.kevin_tm_topbar .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.kevin_tm_topbar .inner .logo img{
+	max-width: 75px;
+}
+.kevin_tm_topbar .menu ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_topbar .menu ul li{
+	margin: 0px 30px 0px 0px;
+	display: inline-block;
+}
+.kevin_tm_topbar .menu ul li:last-child{margin-right: 0px;}
+.kevin_tm_topbar .menu ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 600;
+	position: relative;
+	display: inline-block;
+}
+.kevin_tm_topbar .menu ul li a:after{
+	content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: currentColor;
+}
+.kevin_tm_topbar .menu ul li a:hover:after{
+	width:100%;
+	left:0;
+	right:auto;
+}
+.kevin_tm_topbar[data-skin="dark"] .dark{
+	display: block;
+}
+.kevin_tm_topbar[data-skin="dark"] .light{
+	display: none;
+}
+.kevin_tm_topbar[data-skin="dark"] .menu ul li a{
+	color: #000;
+}
+
+/*---------------------------------------------------*/
+/*	03) KEVIN MOBILE MENU
+/*---------------------------------------------------*/
+
+.kevin_tm_mobile_menu{
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: none;
+	z-index: 10;
+}
+.kevin_tm_mobile_menu .mobile_menu_inner{
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: both;
+	background-color: #fff;
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+}
+.kevin_tm_mobile_menu .mobile_in{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.kevin_tm_mobile_menu .mobile_menu_inner .trigger a{
+	text-decoration: none;
+	color: #000;
+}
+.kevin_tm_mobile_menu .mobile_menu_inner .trigger a .close{display: none;}
+.kevin_tm_mobile_menu .mobile_menu_inner .trigger a .close.opened{display: block;}
+.kevin_tm_mobile_menu .mobile_menu_inner .trigger a .menu.closed{display: none;;}
+.kevin_tm_mobile_menu .dropdown{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	display: none;
+}
+.kevin_tm_mobile_menu .dropdown .dropdown_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 25px 0px;
+}
+.kevin_tm_mobile_menu .dropdown .dropdown_inner ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_mobile_menu .dropdown .dropdown_inner ul li{
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+.kevin_tm_mobile_menu .dropdown .dropdown_inner ul li a{
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+	padding: 4px 0px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+
+/*---------------------------------------------------*/
+/*	04) KEVIN HOME
+/*---------------------------------------------------*/
+
+.kevin_tm_section{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_home{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+.kevin_tm_home .home_inner{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #100e17;
+}
+.kevin_tm_home .bakckground_image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.kevin_tm_home .container{height: 100%;}
+.kevin_tm_home .content{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	z-index: 1;
+}
+.kevin_tm_home .left{
+	padding-right: 50px;
+}
+.kevin_tm_home .content_inner{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.kevin_tm_home .content[data-skin="dark"] .name{
+	color: #000;
+}
+.kevin_tm_home .content[data-skin="dark"] .job h3{
+	color: #000;
+}
+.kevin_tm_home .content .name{
+	font-size: 20px;
+	font-weight: 500;
+	display: inline-block;
+	color: #fff;
+	margin-bottom: 20px;
+}
+.kevin_tm_home .job{
+	margin-bottom: 44px;
+}
+.kevin_tm_home .job h3{
+	font-size: 72px;
+	font-weight: 600;
+	line-height: 1.3;
+	color: #fff;
+}
+.kevin_tm_home .animate_job{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.kevin_tm_home .name_another{
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 1.3;
+	margin-bottom: 15px;
+}
+.kevin_tm_home .desc{
+	margin-bottom: 30px;
+	max-width: 400px;
+}
+.kevin_tm_button a{
+	text-decoration: none;
+	color: #fff;
+	background-color: #DC535B;
+	display: inline-block;
+	padding: 8px 35px 13px 35px;
+	position: relative;
+}
+.kevin_tm_button a:before{
+	position: absolute;
+	content: "";
+	top: 6px;
+	left: 6px;
+	right: -6px;
+	bottom: -6px;
+	background-color: #FFFFFF;
+	z-index: -1;
+	
+	-webkit-transition: all .2s ease;
+	   -moz-transition: all .2s ease;
+	    -ms-transition: all .2s ease;
+	     -o-transition: all .2s ease;
+	        transition: all .2s ease;
+}
+.kevin_tm_button a:hover:before{
+	right: 0px;
+	bottom: 0px;
+}
+.kevin_tm_button[data-color="dark"] a:before{
+	background-color: #000;
+}
+.kevin_tm_button[data-shape="no"] a:before{
+	display: none;
+}
+.kevin_tm_home .right{
+	padding-right: 100px;
+}
+.kevin_tm_home .right .image{
+	width: 430px;
+	height: 430px;
+	border-radius: 100%;
+	position: relative;
+	border: 20px solid rgba(255,255,255,.1);
+} 
+.kevin_tm_home .right .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 100%;
+}
+.kevin_tm_down{
+	position: absolute;
+	z-index: 7;
+	bottom: 60px;
+}
+.kevin_tm_down[data-position="left"]{
+	left: 0px;
+}
+.kevin_tm_down[data-position="right"]{
+	right: 0px;
+}
+.kevin_tm_down[data-position="center"]{
+	left:50%;
+	transform: translateX(-50%);
+}
+.kevin_tm_down .line_wrapper{
+	position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 0;
+    right: 0;
+   	margin: 0px auto;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+	
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+    transition: all .7s;
+}
+.kevin_tm_down .line_wrapper{
+    width: 1px;
+    height: 50px;
+    background: none;
+	display: block;
+}
+.kevin_tm_down .line_wrapper:before{
+	content: "";
+	background-color: #000;
+	width: 1px;
+    height: 50%;
+    display: block;
+    top: 0;
+	
+    -webkit-animation: scroll-down 2s ease-in-out infinite;
+    -ms-animation: scroll-down 2s ease-in-out infinite;
+    animation: scroll-down 2s ease-in-out infinite;;
+}
+
+@-webkit-keyframes scroll-down {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+  }
+  70% {
+    height: 100%;
+    transform: scaleY(0.5);
+    transform-origin: bottom;
+  }
+  100% {
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+.kevin_tm_down[data-skin="light"] .line_wrapper:before{
+	background-color: #fff;
+}
+.kevin_tm_home .background{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.kevin_tm_home .background .image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.kevin_tm_home .background .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+	background-color: rgba(0,0,0,.6);
+}
+.kevin_tm_home .centered_content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	z-index: 12;
+}
+.kevin_tm_home .centered_content .name{
+	font-size: 60px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+	color: #fff;
+}
+.kevin_tm_home .centered_content .job{
+	font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+	color: #fff;
+}
+.kevin_tm_home .centered_content .job.empty{margin-bottom: 0px;}
+.kevin_tm_home .centered_content .social ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_home .centered_content .social ul li{
+	margin: 0px 20px 0px 0px;
+	display: inline-block;
+}
+.kevin_tm_home .centered_content .social ul li:last-child{margin-right: 0px;}
+.kevin_tm_home .centered_content .social ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.kevin_tm_arrow_second{
+	position: absolute;
+	left: 50%;
+	bottom: 3%;
+	transform: translateX(-50%);
+	margin-left: -21px;
+	z-index: 2;
+}
+.kevin_tm_arrow_second.shape{
+	bottom: 9.5%;
+}
+.kevin_tm_arrow_second.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite; }
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px); } }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px); } }
+.kevin_tm_arrow_second a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 30px;
+}
+.kevin_tm_home .centered_content .wrapper{
+	margin-bottom: 50px;
+}
+.kevin_tm_home .centered_content .image{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 0px auto;
+}
+.kevin_tm_home .centered_content .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 100%;
+}
+.kevin_tm_home .centered_content .main:before{
+	position: absolute;
+	content: "";
+	top: -10px;
+	bottom: -10px;
+	left: -10px;
+	right: -10px;
+	background-color: rgba(255,255,255,.1);
+	z-index: -1;
+	border-radius: 100%;
+}
+.kevin_tm_home .hello{
+	display: inline-block;
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: 600;
+	color: #fff;
+}
+.kevin_tm_home .centered_content .social.gutter{
+	margin-bottom: 40px;
+	padding-top: 10px;
+}
+
+/*---------------------------------------------------*/
+/*	05) KEVIN ABOUT
+/*---------------------------------------------------*/
+
+.kevin_tm_about{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-bottom: 200px;
+	padding-top: 200px;
+}
+.kevin_tm_about .about_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+}
+.kevin_tm_about .left{
+	width: 50%;
+	padding-right: 50px;
+}
+.kevin_tm_about .left .image{
+	position: relative;
+}
+.kevin_tm_about .left .image img{
+	opacity: 0;
+}
+.kevin_tm_about .left .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 5px;
+}
+.kevin_tm_about .right{
+	width: 50%;
+	padding-left: 30px;
+}
+.kevin_tm_about .right .name{
+	margin-bottom: 32px;
+}
+.kevin_tm_about .right .name h3{
+	font-size: 35px;
+	font-weight: 700;
+}
+.coloring{
+	color: #D35158;
+}
+.kevin_tm_about .right .desc{
+	margin-bottom: 35px;
+}
+.kevin_tm_about .short_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 30px;
+}
+.kevin_tm_about .short_list ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.kevin_tm_about .short_list ul li{
+	margin: 0px 0px 20px 0px;
+	list-style-type: none;
+	width: 50%;
+	float: left;
+	padding-left: 30px;
+}
+.kevin_tm_about .short_list ul li .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_about .short_list ul li .inner .svg{
+	position: absolute;
+	left: 0px;
+	top: 8px;
+	color: #D35158;
+}
+.kevin_tm_about .short_list ul li .inner .first{
+	display: inline-block;
+	font-weight:600;
+	color: #000;
+}
+.kevin_tm_about .short_list ul li .inner .second{
+	display: inline-block;
+	padding-left: 10px;
+}
+.kevin_tm_about .short_list ul li .inner a{
+	text-decoration: none;
+	color: #333;
+	position: relative;
+	display: inline-block;
+}
+.kevin_tm_about .short_list ul li .inner a:before{
+	content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.15);
+}
+.kevin_tm_about .short_list ul li .inner a:after{
+	content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: currentColor;
+}
+.kevin_tm_about .short_list ul li .inner a:hover:after{
+	width:100%;
+	left:0;
+	right:auto;
+}
+.splitting.animated .char {
+  -webkit-animation: fadeInUp 0.4s cubic-bezier(0.3, 0, 0.7, 1) both;
+  animation: fadeInUp 0.4s cubic-bezier(0.3, 0, 0.7, 1) both;
+  -webkit-animation-delay: calc(30ms * var(--char-index));
+  animation-delay: calc(30ms * var(--char-index)); }
+
+.splitting .whitespace {
+  width: 10px; }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+.splitting.txt.animated .char {
+  -webkit-animation: fadeIn 0.3s cubic-bezier(0.3, 0, 0.7, 1) both;
+  animation: fadeIn 0.3s cubic-bezier(0.3, 0, 0.7, 1) both;
+  -webkit-animation-delay: calc(10ms * var(--char-index));
+  animation-delay: calc(10ms * var(--char-index)); }
+
+.splitting.txt .whitespace {
+  width: 5px; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*---------------------------------------------------*/
+/*	06) KEVIN SERVICE
+/*---------------------------------------------------*/
+
+.kevin_tm_service{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #f8f5f2;
+	padding: 190px 0px 130px 0px;
+}
+.kevin_tm_service .service_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_main_title{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_main_title[data-color="light"] h3{
+	color: #fff;
+}
+.kevin_tm_main_title h3{
+	font-size: 30px;
+	font-weight: 700;
+	color: #000;
+}
+.kevin_tm_main_title .mini{
+	text-transform: uppercase;
+	font-weight: 600;
+	font-family: "Poppins";
+	display: inline-block;
+	margin-bottom: 4px;
+}
+.kevin_tm_service .service_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 88px;
+}
+.kevin_tm_service .service_list ul{
+	margin: 0px 0px 0px -70px;
+	list-style-type: none;
+}
+.kevin_tm_service .service_list ul li{
+	margin: 0px 0px 70px 0px;
+	float: left;
+	width: 33.3333%;
+	padding-left: 70px;
+}
+.kevin_tm_service .service_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	background-color:#fff;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.08);
+	padding: 50px;
+	border-radius: 5px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.kevin_tm_service .service_list ul li .list_inner .svg{
+	color: #D35158;
+	width: 45px;
+	height: 45px;
+	margin-bottom: 30px;
+}
+.kevin_tm_service .service_list ul li .list_inner .title{
+	font-size: 20px;
+	font-weight: 600;
+	color: #000;
+	margin-bottom: 20px;
+}
+.kevin_tm_service .service_list ul li .list_inner .desc{
+	color: #333;
+	margin-bottom: 20px;
+}
+
+/*---------------------------------------------------*/
+/*	07) KEVIN PORTFOLIO
+/*---------------------------------------------------*/
+
+.kevin_tm_portfolio{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 130px;
+	padding-top: 190px;
+}
+.kevin_tm_portfolio .portfolio_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_portfolio .portfolio_filter{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 40px;
+	padding-top: 75px;
+}
+.kevin_tm_portfolio .portfolio_filter ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_portfolio .portfolio_filter ul li{
+	margin: 0px 30px 20px 0px;
+	display: inline-block;
+}
+.kevin_tm_portfolio .portfolio_filter ul li:last-child{margin-right: 0px;}
+.kevin_tm_portfolio .portfolio_filter ul li a{
+	text-decoration: none;
+	color: #000;
+}
+.kevin_tm_portfolio .portfolio_filter ul li a.current{color: #ff214f;}
+.kevin_tm_portfolio .portfolio_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_portfolio .portfolio_list ul{
+	margin: 0px 0px 0px -70px;
+	list-style-type: none;
+}
+.kevin_tm_portfolio .portfolio_list ul li{
+	margin: 0px 0px 70px 0px;
+	width: 33.3333%;
+	float: left;
+	padding-left: 70px;
+}
+.kevin_tm_portfolio .portfolio_list ul li img{
+	min-width: 100%;
+	border-radius: 5px;
+}
+.kevin_tm_portfolio .portfolio_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_portfolio .portfolio_list ul li .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 2;
+}
+.kevin_tm_portfolio .portfolio_list ul li .desc{
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+	z-index: 3;
+	overflow: hidden;
+}
+.kevin_tm_portfolio .portfolio_list ul li .desc .in{
+	background-color: #fff;
+	padding: 20px 20px 11px 20px;
+	position: relative;
+	transform: translateY(100%);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.kevin_tm_portfolio .portfolio_list ul li .list_inner:hover .desc .in{
+	transform: translateY(0%);
+}
+.kevin_tm_portfolio .portfolio_list ul li .desc .in h3{
+	font-size: 20px;
+	font-weight: 600;
+}
+.kevin_tm_portfolio .portfolio_list ul li .desc .in span{
+	position: relative;
+	top: -4px;
+}
+.kevin_tm_portfolio .portfolio_list ul li .full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 5;
+}
+
+/*---------------------------------------------------*/
+/*	08) KEVIN EXPERIENCE
+/*---------------------------------------------------*/
+
+.kevin_tm_experience{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	margin-bottom: 190px;
+}
+.kevin_tm_experience .slider_wrapper{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 2;
+}
+.kevin_tm_experience .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+	background-color: rgba(0,0,0,.85);
+}
+.kevin_tm_experience .content{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	z-index: 3;
+}
+.kevin_tm_experience .content_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 190px 0px 194px 0px;
+}
+.kevin_tm_experience .experience_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 83px;
+}
+.kevin_tm_experience .experience_list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_experience .experience_list ul li{
+	margin: 0px;
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid rgba(255,255,255,.15);
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+}
+.kevin_tm_experience .experience_list ul li:last-child{
+	margin-bottom: 0px;
+	border-bottom: none;
+	padding-bottom: 0px;
+}
+.kevin_tm_experience .experience_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+}
+.kevin_tm_experience .experience_list ul li .first,
+.kevin_tm_experience .experience_list ul li .second{
+	width: 30%;
+	padding-right: 20px;
+}
+.kevin_tm_experience .experience_list ul li .first h3,
+.kevin_tm_experience .experience_list ul li .second h3{
+	color: #fff;
+	font-size: 20px;
+}
+.kevin_tm_experience .experience_list ul li .third{
+	width: 40%;
+	padding-left: 100px;
+}
+.kevin_tm_experience .experience_list ul li .third p{
+	color: #bbb;
+	position: relative;
+	margin-top: -12px;
+}
+
+/*---------------------------------------------------*/
+/*	09) KEVIN AWARDS
+/*---------------------------------------------------*/
+
+.kevin_tm_awards{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 200px;
+}
+.kevin_tm_awards .awards_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_awards .awards_inner .left{
+	width: 40%;
+}
+.kevin_tm_awards .awards_inner .title{
+	margin-bottom: 43px;
+}
+.kevin_tm_awards .awards_inner .title h3{
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 33px;
+}
+.kevin_tm_awards .awards_inner .list{
+	width: 100%;
+	height: auto;
+	clear: both;
+}
+.kevin_tm_awards .awards_inner .list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_awards .awards_inner .list ul li{
+	margin: 0px 0px 40px 0px;
+	width: 100%;
+	float: left;
+}
+.kevin_tm_awards .awards_inner .list ul li:last-child{margin-bottom: 0px;}
+.kevin_tm_awards .awards_inner .list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	padding-left: 90px;
+	opacity: .4;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.kevin_tm_awards .awards_inner .list ul li.active .list_inner{
+	opacity: 1;
+}
+.kevin_tm_awards .awards_inner .list ul li .name{
+	font-size: 20px;
+	font-weight: 600;
+}
+.kevin_tm_awards .awards_inner .list ul li .desc{
+	position: relative;
+	top: -3px;
+}
+.kevin_tm_awards .awards_inner .list ul li .number h3{
+	position: absolute;
+	left: 0px;
+	top: -8px;
+	font-size: 55px;
+	color: #000;
+}
+.kevin_tm_awards .awards_inner .list ul li img{
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -1111111111;
+}
+.kevin_tm_awards .right{
+	position: absolute;
+	width: 580px;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 5px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+
+/*---------------------------------------------------*/
+/*	10) KEVIN PARTNERS
+/*---------------------------------------------------*/
+
+.kevin_tm_partners{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 180px;
+}
+.kevin_tm_partners .partners_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_partners ul{
+	margin: 00px;
+	list-style-type: none;
+}
+.kevin_tm_partners ul li{
+	margin: 0px;
+}
+
+/*---------------------------------------------------*/
+/*	11) KEVIN VIDEO
+/*---------------------------------------------------*/
+
+.kevin_tm_video{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_video .background{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+.kevin_tm_video .background .image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+}
+.kevin_tm_video .background .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.4);
+	z-index: 2;
+}
+.kevin_tm_video .content{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	z-index: 2;
+	padding: 350px 0px;
+}
+.kevin_tm_video .rounded{
+	width: 100px;
+	height: 100px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -50px 0px 0px -50px;
+	border-radius: 100%;
+	z-index: 10;
+	border: 4px solid rgba(255,255,255,.5);
+}
+.kevin_tm_video .rounded:before{
+	position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 0 13px 26px;
+    border-color: transparent transparent transparent #fff;
+    top: 50%;
+    left: 50%;
+    margin-left: 4px;
+    transform: translate(-50%,-50%);
+}
+.kevin_tm_video .rounded a:after{
+	content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+	top: 50%;
+	left: 50%;
+	margin: -55px 0 0 -55px;
+    background-color: inherit;
+    z-index: -1;
+    pointer-events: none;
+    border: 8px solid rgba(255,255,255,.8);
+    border-radius: 100%;
+	-webkit-animation: cs_fn_pulse 2s cubic-bezier(0.3,1,0.3,1) infinite;
+    animation: cs_fn_pulse 2s cubic-bezier(0.3,1,0.3,1) infinite;
+}
+
+@-webkit-keyframes cs_fn_pulse{ from{ opacity:1;  transform:scale(1,1)}
+ to{ opacity:0;  transform:scale(1.8,1.8)}
+}
+@keyframes cs_fn_pulse{ from{ opacity:1;  transform:scale(1,1)}
+ to{ opacity:0;  transform:scale(1.8,1.8)}
+}
+@-webkit-keyframes cs_fn_top{ from{ left:5px;}
+ to{  left: 15px;}
+}
+@keyframes  cs_fn_top{ from{ left:5px;}
+ to{  left: 15px;}
+}
+.kevin_tm_video .rounded a{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	text-decoration: none;
+	z-index: 1;
+}
+
+/*---------------------------------------------------*/
+/*	12) KEVIN TESTIMONIALS
+/*---------------------------------------------------*/
+
+.kevin_tm_testimonials{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 190px;
+	padding-bottom: 200px;
+}
+.kevin_tm_testimonials .testimonials_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 87px;
+}
+.kevin_tm_testimonials .testimonials_inner ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_testimonials .testimonials_inner ul li{
+	margin: 0px;
+}
+.kevin_tm_testimonials .testimonials_inner ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_testimonials .descriptions{
+	width: 100%;
+	float: left;
+	border: 1px solid rgba(0,0,0,.2);
+	margin-bottom: 30px;
+	position: relative;
+	padding: 50px 40px;
+	border-radius: 5px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.kevin_tm_testimonials .descriptions p{
+	opacity: .7;
+}
+.kevin_tm_testimonials .descriptions:before{
+	position: absolute;
+	content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 13px 0 13px;
+    border-color: rgba(0,0,0,.2) transparent transparent transparent;
+	top: 100%;
+}
+.kevin_tm_testimonials .descriptions .svg{
+	width: 35px;
+	height: 35px;
+	color: rgba(0,0,0,.2);
+	margin-bottom: 15px;
+}
+.kevin_tm_testimonials .extra{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	opacity: .5;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.kevin_tm_testimonials .extra .image{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	margin-left: 10px;
+}
+.kevin_tm_testimonials .extra .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 100%;
+}
+.kevin_tm_testimonials .extra .name{
+	padding-left: 20px;
+}
+.kevin_tm_testimonials .extra .name h3{
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 1;
+}
+.kevin_tm_testimonials .extra .name span{
+	font-size: 14px;
+	font-weight: 600;
+}
+.kevin_tm_testimonials .owl-carousel .owl-item.center .descriptions{
+	background-color: #D35158;
+}
+.kevin_tm_testimonials .owl-carousel .owl-item.center .descriptions p{
+	color: #fff;
+	opacity: 1;
+}
+.kevin_tm_testimonials .owl-carousel .owl-item.center .descriptions:before{
+	border-color: #D35158 transparent transparent transparent;
+}
+.kevin_tm_testimonials .owl-carousel .owl-item.center .descriptions .svg{
+	color: #fff;
+}
+.kevin_tm_testimonials .owl-carousel .owl-item.center .extra{
+	opacity: 1;
+}
+
+/*---------------------------------------------------*/
+/*	13) KEVIN NEWS
+/*---------------------------------------------------*/
+
+.kevin_tm_news{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #f8f5f2;
+	padding: 190px 0px 112px 0px;
+}
+.kevin_tm_news .news_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 87px;
+}
+.kevin_tm_news ul{
+	margin: 0px 0px 0px -70px;
+	list-style-type: none;
+}
+.kevin_tm_news ul li{
+	margin: 0px 0px 70px 0px;
+	float: left;
+	width: 33.3333%;
+	padding-left: 70px;
+}
+.kevin_tm_news ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_news ul li .image{
+	position: relative;
+	float: left;
+	margin-bottom: 20px;
+}
+.kevin_tm_news ul li .image img{
+	opacity: 0;
+}
+.kevin_tm_news ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 5px;
+}
+.kevin_tm_news ul li .category{
+	position:absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: 1;
+	display: inline-block;
+	color: #fff;
+	background-color: #D35158;
+	padding: 3px 10px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.kevin_tm_news ul li .full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 2;
+}
+.kevin_tm_news ul li .title{
+	font-size: 20px;
+	font-weight: 600;
+	padding-top: 20px;
+	margin-bottom: 10px;
+}
+.kevin_tm_news ul li .title a{
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.kevin_tm_news ul li .title a:hover{
+	color: #D35158;
+}
+.kevin_tm_read_more{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_read_more a{
+	text-decoration: none;
+	color: #000;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.kevin_tm_read_more[data-color="light"] a{
+	color: #fff;
+}
+.kevin_tm_news .kevin_tm_read_more a:hover{
+	padding-left: 30px;
+}
+.kevin_tm_service .service_list ul li .list_inner:hover .kevin_tm_read_more a{
+	padding-left: 30px;
+}
+.kevin_tm_read_more[data-color="light"] .arrow{
+	background-color: #fff;
+}
+.kevin_tm_read_more[data-color="light"] .arrow::after,
+.kevin_tm_read_more[data-color="light"] .arrow::before{
+	background-color: #fff;
+}
+.kevin_tm_read_more a .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 2px;
+  background-color: #000;
+  left: -20px;
+	
+  -webkit-transition: all .3s ease;
+     -moz-transition: all .3s ease;
+	  -ms-transition: all .3s ease;
+	   -o-transition: all .3s ease;
+		  transition: all .3s ease;
+}
+.kevin_tm_read_more a .arrow::after,
+.kevin_tm_read_more a .arrow::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  right: -4px;
+  background-color: #000;
+}
+.kevin_tm_read_more a .arrow::after {
+  top: -2px;
+  transform: rotate(45deg);
+}
+.kevin_tm_read_more a .arrow::before {
+  top: 2px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  transform: rotate(-45deg);
+}
+.kevin_tm_news .kevin_tm_read_more a:hover .arrow{
+	left: 0px;
+}
+.kevin_tm_service .service_list ul li .list_inner:hover .arrow{
+	left: 0px;
+}
+
+/*---------------------------------------------------*/
+/*	14) KEVIN CONTACT
+/*---------------------------------------------------*/
+
+.kevin_tm_contact{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 190px;
+	margin-bottom: 204px;
+}
+.kevin_tm_contact .contact_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left; 
+}
+.kevin_tm_contact .contact_inner .wrapper{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	padding-top: 43px;
+}
+.kevin_tm_contact .desc{
+	max-width: 50%;
+	float: left;
+	padding-top: 33px;
+}
+.kevin_tm_contact .contact_inner .left{
+	width: 50%;
+	padding-right: 25px;
+}
+.kevin_tm_contact .fields{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_contact .fields .first{
+	width: 100%;
+	float: left;
+}
+.kevin_tm_contact .fields ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_contact .fields ul li{
+	width: 100%;
+	margin: 0px 0px 30px 0px;
+	float: left;
+}
+.kevin_tm_contact .fields ul li input{
+	width: 100%;
+	border: 1px solid rgba(0,0,0,.2);
+	background-color: #fff;
+}
+.kevin_tm_contact .fields ul li input:focus{
+	outline: none;
+	border: 1px solid rgba(0,0,0,.5);
+}
+.kevin_tm_contact .fields .last textarea{
+	width: 100%;
+	border: 1px solid rgba(0,0,0,.2);
+	height: 120px;
+	resize: none;
+	margin-bottom: 20px;
+	background-color: #fff;
+}
+.kevin_tm_contact .fields .last textarea:focus{
+	outline: none;
+	border: 1px solid rgba(0,0,0,.5);
+} 
+.kevin_tm_contact .empty_notice{
+	color: #F52225;
+	margin-bottom: 7px;
+	display: none;
+	text-align: left;
+	font-weight: 500;
+}
+.kevin_tm_contact .contact_error{
+	color: #F52225;
+	text-align: left;
+	font-weight: 500;
+}
+.kevin_tm_contact .returnmessage{
+	color:#3A00FF;
+	margin-bottom: 7px;
+	text-align: left;
+	font-weight: 500;
+}
+.kevin_tm_contact .right{
+	width: 50%;
+	padding-left: 25px;
+	position: relative;
+	top:6px;
+}
+.kevin_tm_contact .map_wrap .map {
+  min-height: 359px;
+  width: 100%;
+}
+
+/*---------------------------------------------------*/
+/*	15) KEVIN FOOTER
+/*---------------------------------------------------*/
+
+.kevin_tm_footer{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #100e17;
+	padding: 92px 0px 60px 0px;
+}
+.kevin_tm_footer .footer_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_footer .footer_inner > ul{
+	margin: 0px 0px 0px -40px;
+	list-style-type: none;
+}
+.kevin_tm_footer .footer_inner > ul > li{
+	margin: 0px 0px 40px 0px;
+	float: left;
+	width: 25%;
+	padding-left: 40px;
+}
+.kevin_tm_footer .footer_inner > ul > li > .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_footer .brand{
+	color: #D35158 !important;
+	font-weight: 800;
+}
+.kevin_tm_footer .footer_inner .desc{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.kevin_tm_footer .footer_inner .text{
+	color: #bbb;
+}
+.kevin_tm_footer .footer_social{
+	width: 100%;
+	float: left;
+}
+.kevin_tm_footer .footer_social ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_footer .footer_social ul li{
+	margin: 0px 10px 10px 0px;
+	display: inline-block;
+}
+.kevin_tm_footer .footer_social ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.kevin_tm_footer .title{
+	width: 100%;
+	float: left;
+	margin-bottom: 27px;
+}
+.kevin_tm_footer .title h3{
+	font-size: 20px;
+	font-weight: 600;
+	color: #fff;
+}
+.kevin_tm_footer .short_list{
+	width: 100%;
+	float: left;
+}
+.kevin_tm_footer .short_list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_footer .short_list ul li{
+	margin: 0px 0px 15px 0px;
+	width: 100%;
+	float: left;
+}
+.kevin_tm_footer .short_list ul li a{
+	text-decoration: none;
+	color: #bbb;
+	position: relative;
+	display: inline-block;
+}
+.kevin_tm_footer .short_list ul li a:before{
+	content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.15);
+}
+.kevin_tm_footer .short_list ul li a:after{
+	content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: currentColor;
+}
+.kevin_tm_footer .short_list ul li a:hover:after{
+	width:100%;
+	left:0;
+	right:auto;
+}
+.kevin_tm_footer .instagram_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_footer .instagram_list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_footer .instagram_list ul li{
+	margin: 0px;
+	width: 33.3333%;
+	float: left;
+}
+.kevin_tm_footer .instagram_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_footer .instagram_list ul li .image{
+	position: relative;
+	float: left;
+}
+.kevin_tm_footer .instagram_list ul li .image img{
+	opacity: 0;
+}
+.kevin_tm_footer .instagram_list ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.kevin_tm_footer .full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 2;
+}
+
+/*---------------------------------------------------*/
+/*	16) KEVIN COPYRIGHT
+/*---------------------------------------------------*/
+
+.kevin_tm_copyright{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #100e17;
+	padding: 46px 0px 50px 0px;
+	border-top: 1px solid rgba(255,255,255,.2);
+}
+.kevin_tm_copyright .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.kevin_tm_copyright .inner .copy p{
+	color: #bbb;
+}
+.kevin_tm_copyright .inner .copy p a{
+	text-decoration: none;
+	color: #fff;
+}
+.kevin_tm_copyright .inner .copy p a{
+	text-decoration: none;
+	color: #fff;
+	position: relative;
+	display: inline-block;
+}
+.kevin_tm_copyright .inner .copy p a:before{
+	content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.15);
+}
+.kevin_tm_copyright .inner .copy p a:after{
+	content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: currentColor;
+}
+.kevin_tm_copyright .inner .copy p a:hover:after{
+	width:100%;
+	left:0;
+	right:auto;
+}
+.kevin_tm_totop{
+	position: relative;
+	overflow: hidden;
+	background-color: #D35158;
+    padding: 22px;
+    border-radius: 3px;
+    display: inline-block;
+	top: 4px;
+}
+.kevin_tm_totop:after{
+	width: 0px;
+    height: 0px;
+    position: absolute;
+    content: '';
+    border: 5px solid transparent;
+    border-bottom-color: #fff;
+    top: 14px;
+    left: 17px;
+	z-index: 2;
+}
+
+/*---------------------------------------------------*/
+/*	17) KEVIN CURSOR
+/*---------------------------------------------------*/
+
+.mouse-cursor{
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  visibility: hidden;
+}
+.cursor-inner {
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  z-index: 10000001;
+  background-color: #D35158;
+  -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+  transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+}
+.cursor-inner.cursor-hover {
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  background-color: #D35158;
+  opacity: .3;
+}
+.cursor-outer {
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #D35158;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 10000000;
+  opacity: .5;
+  -webkit-transition: all .08s ease-out;
+  transition: all .08s ease-out;
+}
+.cursor-outer.cursor-hover {
+  opacity: 0;
+}
+.kevin_tm_fixed_part{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 1;
+}
+.kevin_tm_fixed_part.active{
+	position: relative;
+}
+.kevin_tm_relative_sections{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+}
+.video-wrapper{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+.video-wrapper video{
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	border-radius: 5px;
+}
+
+/*---------------------------------------------------*/
+/*	18) KEVIN WATER EFFECT
+/*---------------------------------------------------*/
+
+.kevin_tm_home.ripple{
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: url("../img/slider/5.jpg");
+	position: relative;
+	z-index: 4;
+}
+.kevin_tm_home .overlay_extra{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.6);
+}
+
+/*---------------------------------------------------*/
+/*	 19) KEVIN GLITCH EFFECT
+/*---------------------------------------------------*/
+
+.glitch{
+	position: absolute;
+ 	width: 100%;
+ 	height: 100%;
+	top: 0;
+ 	left: 0;
+	background-image: url("../img/slider/5.jpg");
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-position: center;
+	z-index: -1 !important;
+	opacity: 1;
+	transform: scale(1);
+}
+.glitch:before{
+	content: "";
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.glitch:after{
+	content: "";
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.5);
+	z-index: 1;
+}
+
+/*---------------------------------------------------*/
+/*	20) KEVIN PARTICLE EFFECT
+/*---------------------------------------------------*/
+
+#particles-js {
+	width: 100%;
+	height: 100vh;
+  	position: relative;
+  	z-index: 2;
+}
+.svg.shape{
+	position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    z-index: 21111;
+}
+.svg.shape svg{
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+.kevin_tm_home .another_shape{
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    z-index: 111;
+}
+.kevin_tm_home .another_shape .svg {
+    width: 100%;
+	height: 100%;
+}
+.kevin_tm_home.clip{
+	clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
+}
+
+/*---------------------------------------------------*/
+/*	21) KEVIN PORTFOLIO SINGLE
+/*---------------------------------------------------*/
+
+.kevin_tm_portfolio_single{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kevin_tm_portfolio_single .hero{
+	width: 100%;
+	height: 100vh;
+	clear: both;
+	float: left;
+	position: relative;
+	margin-bottom: 200px;
+}
+.kevin_tm_portfolio_single .hero .image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.kevin_tm_portfolio_single .hero .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.4);
+	z-index: 1;
+}
+.kevin_tm_portfolio_single .hero .content{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+.kevin_tm_portfolio_single .hero .content h3{
+	font-size: 60px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+	margin-bottom: 10px;
+}
+.kevin_tm_portfolio_single .hero .content span{
+	font-weight: 600;
+    color: #fff;
+}
+.kevin_tm_portfolio_single .main_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 190px;
+}  
+.kevin_tm_portfolio_single .main_details .details_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+}
+.kevin_tm_portfolio_single .main_details .left .social label{
+	font-weight: 700;
+	min-width: 130px;
+}
+.kevin_tm_portfolio_single .main_details .left{
+	width: 40%;
+	padding-right: 50px;
+}
+.kevin_tm_portfolio_single .main_details .left .social{
+	display: flex;
+	align-items: center;
+}
+.kevin_tm_portfolio_single .main_details .left .social ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_portfolio_single .main_details .left .social ul li{
+	margin: 0px 10px 0px 0px;
+	display: inline-block;
+}
+.kevin_tm_portfolio_single .main_details .left .social ul li a{
+	text-decoration: none;
+	color: #333;
+}
+.kevin_tm_portfolio_single .main_details .left .short{
+	margin: 0px;
+	list-style-type: none;
+}
+.kevin_tm_portfolio_single .main_details .left .short li{
+	margin: 0px 0px 10px 0px;
+	width: 100%;
+}
+.kevin_tm_portfolio_single .main_details .left .short li span{
+	display: inline-block;
+}
+.kevin_tm_portfolio_single .main_details .left .short li span.first{
+	font-weight: 700;
+	min-width: 130px;
+}
+.kevin_tm_portfolio_single .main_details .left .short li span a{
+	text-decoration: none;
+	color: #333;
+	position: relative;
+	display: inline-block;
+}
+.kevin_tm_portfolio_single .main_details .left .short li span a:before{
+	content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.15);
+}
+.kevin_tm_portfolio_single .main_details .left .short li span a:after{
+	content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: currentColor;
+}
+.kevin_tm_portfolio_single .main_details .left .short li span a:hover:after{
+	width:100%;
+	left:0;
+	right:auto;
+}
+.kevin_tm_portfolio_single .main_details .right{
+	width: 60%;
+	padding-left: 50px;
+}
+.kevin_tm_portfolio_single .main_details .title{
+	font-size: 20px;
+    font-weight: 600;
+    color: #000;
+	margin-bottom: 30px;
+}
+.kevin_tm_portfolio_single .main_details .right p{
+	font-size: 20px;
+    color: #333;
+}
+.kevin_tm_portfolio_single .jarallax_image{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	padding: 350px 0px;
+	margin-bottom: 200px;
+}
+.kevin_tm_portfolio_single .jarallax_image .image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.kevin_tm_portfolio_single .extra_info{
+	width: 50%;
+	margin-bottom: 190px;
+}
+.kevin_tm_portfolio_single .extra_info h3{
+	font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 30px;
+}
+.kevin_tm_portfolio_single .image_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 0px 40px;
+	margin-bottom: 145px;
+}
+.kevin_tm_portfolio_single .image_list ul{
+	margin: 0px 0px 0px -40px;
+	list-style-type: none;
+}
+.kevin_tm_portfolio_single .image_list ul li{
+	margin: 0px 0px 40px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 40px;
+}
+.kevin_tm_portfolio_single .image_list ul li:nth-child(2n+3){
+	width: 100%;
+}
+.kevin_tm_portfolio_single .image_list ul li .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kevin_tm_portfolio_single .image_list ul li .inner .image{
+	float: left;
+	position: relative;
+}
+.kevin_tm_portfolio_single .image_list ul li .inner .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.kevin_tm_portfolio_single .pagination{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 185px;
+}
+.kevin_tm_portfolio_single .pagination .pagination_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;	
+}
+.kevin_tm_portfolio_single .pagination a{
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	color: #000;
+	font-size: 20px;
+	font-weight: 700;
+}
+.kevin_tm_portfolio_single .pagination a:before{
+	content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.15);
+}
+.kevin_tm_portfolio_single .pagination a:after{
+	content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: currentColor;
+}
+.kevin_tm_portfolio_single .pagination a:hover:after{
+	width:100%;
+	left:0;
+	right:auto;
+}
+
+/*---------------------------------------------------*/
+/*	22) KEVIN INTRO
+/*---------------------------------------------------*/
+
+.kevin_tm_intro_hero{
+	width: 100%;
+	height:80vh;
+	position: relative;
+	margin-bottom: 200px;
+}
+.kevin_tm_intro_hero .bg{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.kevin_tm_intro_hero .bg .image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.kevin_tm_intro_hero .bg .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.7);
+	z-index: 1;
+}
+.kevin_tm_intro_hero .content{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+}
+.kevin_tm_intro_hero .content img{
+	margin-bottom: 40px;
+}
+.kevin_tm_intro_hero .content p{
+	color: #fff;
+	font-weight: 600;
+	font-size: 22px;
+	font-family: "Poppins";
+}
+.arlo_intro_content{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.arlo_intro_content .main_title{
+	width: 100%;
+	max-width: 600px;
+	margin: 0px auto;
+	text-align: center;
+}
+.arlo_intro_content .main_title h3{
+	font-size: 35px;
+	font-weight: 700;
+}
+.arlo_intro_content .main_title p{
+	font-weight: 600;
+	font-size: 17px;
+}
+.arlo_intro_content .demo_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 100px 50px 200px 50px;
+}
+.arlo_intro_content .demo_list ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.arlo_intro_content .demo_list ul li{
+	margin: 0px 0px 50px 0px;
+	width: 33.3333%;
+	float: left;
+	padding-left: 50px;
+}
+.arlo_intro_content .demo_list ul li .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.arlo_intro_content .demo_list ul li .details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #100f17;
+	padding: 20px;
+	text-align: center;
+	border-top: 1px solid rgba(255,255,255,.2);
+}
+.arlo_intro_content .demo_list ul li .details a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: "Poppins";
+	font-weight: 600;
+	display: inline-block;
+}
+.arlo_intro_content .full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+.arlo_intro_content .bottom_part{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #100f17;
+	padding: 200px 0px;
+}
+.arlo_intro_content .bottom_part .inner{
+	width: 100%;
+	max-width: 600px;
+	margin: 0px auto;
+	text-align: center;
+}
+.arlo_intro_content .bottom_part .inner h3{
+	color: #fff;
+	font-weight: 600;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+.arlo_intro_content .bottom_part .inner a{
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	background-color: #d35158;
+	border-radius: 5px;
+	padding: 7px 35px;
+	transition: all .3s ease;
+}
+.arlo_intro_content .bottom_part .inner a:hover{
+	color: #000;
+	background-color: #fff;
+}
+
+
+
+/*---------------------------------------------------*/
+/*	22) KEVIN MEDIA QUERIES (FOR SMALL DEVIVES)
+/*---------------------------------------------------*/
+
+@media (max-width: 1200px) {
+	.kevin_tm_home .right{display: none;}
+	.kevin_tm_awards .awards_inner .right{display: none;}
+	.kevin_tm_awards .awards_inner .left{width: 100%;}
+}
+@media (max-width: 1040px) {
+	.kevin_tm_topbar{display: none;}
+	.kevin_tm_mobile_menu{display: block;}
+	.kevin_tm_home .job h3{font-size: 60px;}
+	.kevin_tm_home .left{padding: 0px;}
+	.kevin_tm_about .about_inner{flex-direction: column;align-items: baseline;}
+	.kevin_tm_about .left{width: 100%;padding: 0px;margin-bottom: 50px;}
+	.kevin_tm_about .right{width: 100%;padding: 0px;}
+	.kevin_tm_about .right .name h3{font-size: 25px;}
+	.kevin_tm_service .service_list ul{margin-left: -20px;}
+	.kevin_tm_service .service_list ul li{width: 50%;padding-left: 20px;margin-bottom: 20px;}
+	.kevin_tm_portfolio .portfolio_list ul{margin-left: -20px;}
+	.kevin_tm_portfolio .portfolio_list ul li{width: 50%;padding-left: 20px;margin-bottom: 20px;}
+	.kevin_tm_experience .experience_list ul li .list_inner{flex-direction: column;}
+	.kevin_tm_experience .experience_list ul li .list_inner > div{width: 100%;}
+	.kevin_tm_experience .experience_list ul li .first, .kevin_tm_experience .experience_list ul li .second{padding-right: 0px;margin-bottom: 25px;}
+	.kevin_tm_experience .experience_list ul li .third{padding-left: 0px;}
+	.kevin_tm_awards .awards_inner .title h3{font-size: 25px;}
+	.kevin_tm_news ul{margin-left: -40px;}
+	.kevin_tm_news ul li{width: 50%;padding-left: 40px;margin-bottom: 40px;}
+	.kevin_tm_contact .contact_inner .wrapper{flex-direction: column;}
+	.kevin_tm_contact .contact_inner .left{width: 100%;padding-right: 0px;margin-bottom: 65px;}
+	.kevin_tm_contact .desc{max-width: 100%;}
+	.kevin_tm_contact .right{padding-left: 0px;width: 100%;}
+	.kevin_tm_footer .footer_inner > ul > li{width: 50%;}
+	.kevin_tm_portfolio_single .main_details .details_inner{flex-direction: column;align-items: baseline;}
+	.kevin_tm_portfolio_single .main_details .details_inner .left{width: 100%;padding-right: 0px;margin-bottom: 50px;}
+	.kevin_tm_portfolio_single .main_details .details_inner .right{width: 100%;padding-left: 0px;}
+	.kevin_tm_portfolio_single .jarallax_image{padding: 200px 0px;}
+	.kevin_tm_portfolio_single .extra_info{width: 100%;}
+	.kevin_tm_portfolio_single .image_list{padding: 0px 20px;}
+	.kevin_tm_portfolio_single .image_list ul{margin: 0px;}
+	.kevin_tm_portfolio_single .image_list ul li{width: 100%;padding-left: 0px;margin-bottom: 20px;}
+	.kevin_tm_portfolio_single .pagination a{font-size: 18px;}
+	.arlo_intro_content .demo_list ul li{width: 50%;}
+}
+@media (max-width: 768px) {
+	.kevin_tm_home .job h3{font-size: 40px;}
+	.kevin_tm_about .short_list ul li{width: 100%;padding-left: 0px;}
+	.kevin_tm_about .short_list ul{margin: 0px;}
+	.kevin_tm_service .service_list ul{margin: 0px;}
+	.kevin_tm_service .service_list ul li{width: 100%;padding-left: 0px;}
+	.kevin_tm_service .service_list ul li .list_inner{padding: 30px;}
+	.kevin_tm_portfolio .portfolio_list ul{margin: 0px;}
+	.kevin_tm_portfolio .portfolio_list ul li{width: 100%;padding:0px;}
+	.kevin_tm_portfolio .portfolio_list ul li .desc{left: 30px;bottom: 30px;}
+	.kevin_tm_video .content{padding: 280px 0px;}
+	.kevin_tm_news ul{margin-left: 0px;}
+	.kevin_tm_news ul li{width: 100%;padding-left: 0px;}
+	.kevin_tm_footer .footer_inner > ul{margin: 0px;}
+	.kevin_tm_footer .footer_inner > ul > li{width: 100%;padding-left: 0px;}
+	.kevin_tm_portfolio_single .hero .content h3{font-size: 40px;}
+	.arlo_intro_content .demo_list ul{margin: 0px;}
+	.arlo_intro_content .demo_list ul li{width: 100%;padding-left: 0px;margin-bottom: 20px;}
+	.arlo_intro_content .demo_list{padding-left: 20px;padding-right: 20px;}
+}
