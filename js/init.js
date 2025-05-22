@@ -425,13 +425,13 @@ function kevin_tm_animate_text(){
 	var animateSpan2		= jQuery('.kevin_tm_animation_text_word2');
 	
 	animateSpan.typed({
-		strings: ["freelancer", "developer", "photographer"],
+		strings: ["Innovation", "Growth", "Solutions"],
 		loop: true,
 		startDelay: 1e3,
 		backDelay: 2e3
 	});
 	animateSpan2.typed({
-		strings: ["Santiago", "Developer", "Designer"],
+		strings: [" Intelligence", "Growth", "Reliability"],
 		loop: true,
 		startDelay: 1e3,
 		backDelay: 2e3
