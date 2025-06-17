@@ -68,7 +68,7 @@ function kevin_tm_hover_3d(){
 		$(".kevin_tm_about .about_inner").hover3d({
 		selector: ".main",
 		shine: false,
-		sensitivity: 350,
+		sensitivity: 250,
 			
 	});
 }
